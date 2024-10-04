@@ -8,6 +8,7 @@ MenuPrin = """
 2. Modo Jugador vs Máquina (JvE)
 3. Estadisticas de Juego
 4. Tabla de posiciones
+5. Salirfrom math import e
 """
 
 MenuJvJ = """

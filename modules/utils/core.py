@@ -1,6 +1,6 @@
 import os
 import json
-MY_DATABASE = 'data/PPoT.json'
+MY_DATABASE = None
 
 def NewFile(*param):
     with open(MY_DATABASE,"w") as wf:
