@@ -2,6 +2,8 @@ import modules.utils.clAndPause as clp
 import modules.utils.messages as msg
 import modules.utils.core as cf
 import modules.PvPMode as pvpMode
+import modules.PvEMode as pveMode
+import modules.EstadisticasJuego as statsG
 from math import e  # Importa la constante 'e' de la librería math
 
 
@@ -33,14 +35,15 @@ if (__name__ == '__main__'):
             try:
                 match userOp:
                     case 1:
-                        pvpMode.menuPvP(Juego)
+                        pvpMode.menuPvP(cf.MY_DATABASE)
                     case 2:
-                        pass
+                        pveMode.menuPvE(cf.MY_DATABASE)
                     case 3:
-                        pass
+                        statsG.EstadisticasJuego(cf.MY_DATABASE)
                     case 4:
                         pass
                     case 5:
+                        clp.limpiar()
                         isGame = False
                     case _:
                         print("La opcion que ingreso no esta disponible.")

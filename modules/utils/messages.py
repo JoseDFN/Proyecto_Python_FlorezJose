@@ -21,7 +21,7 @@ MenuJvJ = """
 3. Registre Nombre y Nickname del Jugador 2
 4. Inicie sesion del Jugador 2
 5. Iniciar Partida
-6. Salir
+6. Saliral menu Principal
 """
 
 MenuJvE = """
@@ -31,8 +31,8 @@ MenuJvE = """
  °___________________________°
 1. Registre Nombre y Nickname del Jugador
 2. Inicie sesion del Jugador
-2. Iniciar Partida
-3. Salir
+3. Iniciar Partida
+4. Saliral menu Principal
 """
 
 EstadisticasJuego = """
@@ -44,6 +44,7 @@ EstadisticasJuego = """
 2. Jugador ultimo en el Ranking
 3. Jugadores que mas han perdido contra la IA (Maquina)
 4. Promedio de jugadores que le han ganado a la IA (Maquina)
+5. Saliral menu Principal
 """
 
 MensajeRetroP = "¡Bien hecho!"
