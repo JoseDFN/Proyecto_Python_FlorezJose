@@ -18,10 +18,10 @@ MenuJvJ = """
  °___________________________°
 1. Registre Nombre y Nickname del Jugador 1
 2. Inicie sesion del Jugador 1
-2. Registre Nombre y Nickname del Jugador 2
+3. Registre Nombre y Nickname del Jugador 2
 4. Inicie sesion del Jugador 2
-3. Iniciar Partida
-4. Salir
+5. Iniciar Partida
+6. Salir
 """
 
 MenuJvE = """
@@ -50,3 +50,6 @@ MensajeRetroP = "¡Bien hecho!"
 
 MensajeRetroF = "Sigue intentándolo!"
 #por si algo agregar ver historial de partidas
+
+def mensajeErro (e):
+    print(f"Ha ocurrido un error inesperado: {e}")
