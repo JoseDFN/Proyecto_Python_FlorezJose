@@ -29,3 +29,65 @@ def registerP(*game):
 
     # Guardar el juego actualizado en el archivo JSON
     core.save_game(game_data)
+
+def showPlayers():
+    game_data = core.ReadFile()
+    for p in game_data['Jugadores']:
+        print(f'ID: {p}, Nickname: {game_data["Jugadores"][p]["nickname"]}')
+def loginP1():
+    game_data = core.ReadFile()  # Supongo que este método lee y carga correctamente el JSON
+    clp.limpiar()  # Asumo que limpia la pantalla o consola
+    showPlayers()  # Esta función debe mostrar a los jugadores disponibles
+    print(msg.LoginJugador)
+    
+    try:
+        # Pedir entrada al usuario y convertirla en un entero
+        opPlayer = int(input("Ingrese el codigo del jugador: "))
+        
+        # Verificar si el código ingresado existe en el diccionario 'Jugadores'
+        if str(opPlayer) in game_data["Jugadores"]:  # Convertir a string ya que las claves son cadenas de texto
+            # Asignar el jugador 1
+            data.partida['Player1'] = opPlayer
+            # Imprimir el nickname del jugador seleccionado
+            print(f'{game_data["Jugadores"][str(opPlayer)]["nickname"]} seleccionado como jugador 1')
+            clp.pausar ()
+        else:
+            print(f"El jugador con código {opPlayer} no existe.")
+            clp.pausar ()
+    
+    except ValueError:
+        print("Entrada inválida. Por favor ingrese un número válido.")
+        clp.pausar ()
+    
+    except Exception as e:
+        print(f"Ha ocurrido un error inesperado: {e}")
+        clp.pausar ()
+
+def loginP2():
+    game_data = core.ReadFile()  # Supongo que este método lee y carga correctamente el JSON
+    clp.limpiar()  # Asumo que limpia la pantalla o consola
+    showPlayers()  # Esta función debe mostrar a los jugadores disponibles
+    print(msg.LoginJugador)
+    
+    try:
+        # Pedir entrada al usuario y convertirla en un entero
+        opPlayer = int(input("Ingrese el codigo del jugador: "))
+        
+        # Verificar si el código ingresado existe en el diccionario 'Jugadores'
+        if str(opPlayer) in game_data["Jugadores"]:  # Convertir a string ya que las claves son cadenas de texto
+            # Asignar el jugador 1
+            data.partida['Player2'] = opPlayer
+            # Imprimir el nickname del jugador seleccionado
+            print(f'{game_data["Jugadores"][str(opPlayer)]["nickname"]} seleccionado como jugador 2')
+            clp.pausar ()
+        else:
+            print(f"El jugador con código {opPlayer} no existe.")
+            clp.pausar ()
+    
+    except ValueError:
+        print("Entrada inválida. Por favor ingrese un número válido.")
+        clp.pausar ()
+    
+    except Exception as e:
+        print(f"Ha ocurrido un error inesperado: {e}")
+        clp.pausar ()

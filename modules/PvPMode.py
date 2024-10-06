@@ -21,14 +21,12 @@ def menuPvP (*game):
                     case 1:
                         ch.registerP(game)
                     case 2:
-                        pass
+                        ch.loginP1()
                     case 3:
-                        pass
+                        ch.loginP2()
                     case 4:
                         pass
                     case 5:
-                        pass
-                    case 6:
                         isPlayer = False
                     case _:
                         print("La opcion que ingreso no esta disponible.")
