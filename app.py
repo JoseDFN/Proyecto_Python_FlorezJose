@@ -10,7 +10,7 @@ from math import e  # Importa la constante 'e' de la librería math
 if (__name__ == '__main__'):
     userOp = int(0)
     isGame = True
-    Juego = {
+    Game = {
         'Jugadores':{},
         'Maquina':{
             'pJugados': 0,
@@ -21,7 +21,7 @@ if (__name__ == '__main__'):
     }
     while isGame:
         cf.MY_DATABASE = 'data/PPoT.json'  # Assign the MY_DATABASE variable
-        cf.checkFile(Juego)
+        cf.checkFile(Game)
         clp.limpiar()
         print (msg.MenuPrin)
         try:

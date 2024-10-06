@@ -1,5 +1,36 @@
 {
-    "Jugadores": {},
+    "Jugadores": {
+        "1": {
+            "name": "jose",
+            "nickname": "chaps",
+            "win": 0,
+            "lose": 0,
+            "points": 0,
+            "pPlayed": 0,
+            "gamesLoseMatchine": 0,
+            "gamesWonMachine": 0
+        },
+        "2": {
+            "name": "lucio",
+            "nickname": "idk",
+            "win": 0,
+            "lose": 0,
+            "points": 0,
+            "pPlayed": 0,
+            "gamesLoseMatchine": 0,
+            "gamesWonMachine": 0
+        },
+        "3": {
+            "name": "jose",
+            "nickname": "chaps928",
+            "win": 0,
+            "lose": 0,
+            "points": 0,
+            "pPlayed": 0,
+            "gamesLoseMatchine": 0,
+            "gamesWonMachine": 0
+        }
+    },
     "Maquina": {
         "pJugados": 0,
         "pGanados": 0,

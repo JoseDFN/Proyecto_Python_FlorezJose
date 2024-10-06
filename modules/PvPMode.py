@@ -1,7 +1,8 @@
 import modules.utils.clAndPause as clp
 import modules.utils.messages as msg
+import modules.utils.player as ch
 
-def menuPvP (Juego):
+def menuPvP (*game):
     isPlayer = True
     userOpPvP = int(0)
     while isPlayer:
@@ -18,7 +19,7 @@ def menuPvP (Juego):
             try:
                 match userOpPvP:
                     case 1:
-                        pass
+                        ch.registerP(game)
                     case 2:
                         pass
                     case 3:

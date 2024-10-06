@@ -47,6 +47,13 @@ EstadisticasJuego = """
 5. Saliral menu Principal
 """
 
+MensajeRegJugador = """
+  ___________________________
+ °                           °
+|     ℝ𝕖𝕘𝕚𝕤𝕥𝕣𝕒𝕟𝕕𝕠 𝕁𝕦𝕘𝕒𝕕𝕠𝕣     |
+ °___________________________°
+"""
+
 MensajeRetroP = "¡Bien hecho!"
 
 MensajeRetroF = "Sigue intentándolo!"

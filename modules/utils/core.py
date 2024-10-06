@@ -19,3 +19,17 @@ def checkFile(*param):
     else:
         if len(param):
             NewFile(data[0])
+def save_game(game):
+    NewFile(game)
+def load_game():
+    game = {
+        'Jugadores':{},
+        'Maquina':{
+            'pJugados': 0,
+            'pGanados': 0,
+            'pPerdidos':0,
+            'puntosT': 0
+        }
+    }
+    checkFile(game)  # Chequea si el archivo existe, y si no, lo crea con los datos iniciales
+    return game

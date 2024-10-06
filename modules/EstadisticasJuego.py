@@ -1,7 +1,7 @@
 import modules.utils.clAndPause as clp
 import modules.utils.messages as msg
 
-def EstadisticasJuego (Juego):
+def EstadisticasJuego (game):
     isPlayer = True
     userOpPvE = int(0)
     while isPlayer:

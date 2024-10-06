@@ -1,7 +1,7 @@
 import modules.utils.clAndPause as clp
 import modules.utils.messages as msg
 
-def menuPvE (Juego):
+def menuPvE (game):
     isPlayer = True
     userOpPvE = int(0)
     while isPlayer:
