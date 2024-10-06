@@ -1,0 +1,9 @@
+{
+    "Jugadores": {},
+    "Maquina": {
+        "pJugados": 0,
+        "pGanados": 0,
+        "pPerdidos": 0,
+        "puntosT": 0
+    }
+}
