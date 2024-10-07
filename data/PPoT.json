@@ -3,21 +3,71 @@
         "1": {
             "name": "pablo",
             "nickname": "yay",
-            "win": 0,
-            "lose": 0,
+            "wins": 0,
+            "losses": 0,
             "points": 0,
-            "pPlayed": 0,
-            "gamesLoseMatchine": 0,
+            "gPlayed": 0,
+            "gamesLostMatchine": 0,
             "gamesWonMachine": 0
         },
         "2": {
             "name": "jose",
             "nickname": "chaps",
-            "win": 0,
-            "lose": 0,
+            "wins": 1,
+            "losses": 0,
+            "points": 6,
+            "gPlayed": 1,
+            "gamesLostMatchine": 0,
+            "gamesWonMachine": 0
+        },
+        "3": {
+            "name": "baron",
+            "nickname": "ouch",
+            "wins": 0,
+            "losses": 0,
             "points": 0,
-            "pPlayed": 0,
-            "gamesLoseMatchine": 0,
+            "gPlayed": 0,
+            "gamesLostMatchine": 0,
+            "gamesWonMachine": 0
+        },
+        "4": {
+            "name": "galvis",
+            "nickname": "alejo710",
+            "wins": 0,
+            "losses": 1,
+            "points": 0,
+            "gPlayed": 1,
+            "gamesLostMatchine": 0,
+            "gamesWonMachine": 0
+        },
+        "5": {
+            "name": "santiago",
+            "nickname": "kutonix",
+            "wins": 0,
+            "losses": 0,
+            "points": 0,
+            "gPlayed": 0,
+            "gamesLostMatchine": 0,
+            "gamesWonMachine": 0
+        },
+        "6": {
+            "name": "pablo",
+            "nickname": "caucho",
+            "wins": 0,
+            "losses": 0,
+            "points": 0,
+            "gPlayed": 0,
+            "gamesLostMatchine": 0,
+            "gamesWonMachine": 0
+        },
+        "7": {
+            "name": "hallo",
+            "nickname": "hi",
+            "wins": 0,
+            "losses": 0,
+            "points": 0,
+            "gPlayed": 0,
+            "gamesLostMatchine": 0,
             "gamesWonMachine": 0
         }
     },

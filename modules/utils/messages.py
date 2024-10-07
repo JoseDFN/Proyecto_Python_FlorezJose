@@ -53,10 +53,20 @@ MensajeRegJugador = """
  °___________________________°
 """
 
-MensajeRetroP = "¡Bien hecho!"
+BienvenidoMatch = """
+  ___________________________
+ °                           °
+|     𝔹𝕚𝕖𝕟𝕧𝕖𝕟𝕚𝕕𝕠 𝕒𝕝 𝕁𝕦𝕖𝕘𝕠     |
+ °___________________________°
+"""
 
-MensajeRetroF = "Sigue intentándolo!"
-#por si algo agregar ver historial de partidas
+OpcionesJuego = """
+1.Piedra ✊
+2.Papel ✋
+3.Tijera ✂️
+"""
+
+graciasJugar = "Gracias por jugar. ¡Hasta la próxima!"
 
 LoginJugador = "Ingrese codigo del jugador a logearse: "
 
