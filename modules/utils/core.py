@@ -27,8 +27,7 @@ def load_game():
         'Maquina':{
             'pJugados': 0,
             'pGanados': 0,
-            'pPerdidos':0,
-            'puntosT': 0
+            'pPerdidos':0
         }
     }
     checkFile(game)  # Chequea si el archivo existe, y si no, lo crea con los datos iniciales

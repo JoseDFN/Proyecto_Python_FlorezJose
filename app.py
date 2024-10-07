@@ -15,8 +15,7 @@ if (__name__ == '__main__'):
         'Maquina':{
             'pJugados': 0,
             'pGanados': 0,
-            'pPerdidos':0,
-            'puntosT': 0
+            'pPerdidos':0
         }
     }
     while isGame:

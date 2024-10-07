@@ -1,5 +1,7 @@
 import modules.utils.clAndPause as clp
 import modules.utils.messages as msg
+import modules.utils.player as ch
+import modules.utils.matches as mat
 
 def menuPvE (game):
     isPlayer = True
@@ -18,11 +20,11 @@ def menuPvE (game):
             try:
                 match userOpPvE:
                     case 1:
-                        pass
+                        ch.registerP()
                     case 2:
-                        pass
+                        ch.loginP1()
                     case 3:
-                        pass
+                        mat.modePvE()
                     case 4:
                         isPlayer = False
                     case _:

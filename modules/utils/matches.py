@@ -2,6 +2,7 @@ import modules.utils.clAndPause as clp
 import modules.utils.messages as msg
 import modules.utils.dataPlayers as data
 import modules.utils.core as core
+import random
 
 global winsP1
 global lossesP1
@@ -82,6 +83,38 @@ def modePvP ():
             game_data["Jugadores"][str(Player2)]["wins"] += 1
             game_data["Jugadores"][str(Player2)]["points"] += 2
             game_data["Jugadores"][str(Player1)]["losses"] += 1
+            ganador = "Jugador 2"
+        print(f"\n¡El ganador es {ganador}!")
+        print(f"Resultado final: Jugador 1: {data.partida['Player1Wins']} - Jugador 2: {data.partida['Player2Wins']}")
+        core.save_game(game_data)
+        print(msg.graciasJugar)
+        break
+def modePvE ():
+    while True:
+        oprandom = [1,2,3]
+        initializedata0(data.partida)
+        game_data = core.ReadFile()
+        Player1 = data.partida['Player1']
+        game_data["Jugadores"][str(Player1)]["gPlayed"] += 1
+        game_data["Maquina"]["pJugados"] += 1
+        clp.limpiar()
+        print (msg.BienvenidoMatch)
+        while (((data.partida['Player1Wins']) or (data.partida['Player2Wins'])) < 3):
+            clp.limpiar()
+            print (msg.OpcionesJuego)
+            opPlayer1 = int(input('Ingrese la opcion a elegir para Jugador 1: '))
+            clp.limpiar()
+            opPlayer2 = random.choice(oprandom)
+            resultadoMatch(opPlayer1, opPlayer2)
+            print(f"Resultado actual: Jugador 1: {data.partida['Player1Wins']} - Jugador 2: {data.partida['Player2Wins']}")
+            clp.pausar()
+        if ((data.partida['Player1Wins']) > (data.partida['Player2Wins'])):
+            game_data["Jugadores"][str(Player1)]["gamesWonMachine"] += 1
+            game_data["Maquina"]["pPerdidos"] += 1
+            ganador = "Jugador 1"
+        else:
+            game_data["Maquina"]["pGanados"] += 1
+            game_data["Jugadores"][str(Player1)]["gamesLostMatchine"] += 1
             ganador = "Jugador 2"
         print(f"\n¡El ganador es {ganador}!")
         print(f"Resultado final: Jugador 1: {data.partida['Player1Wins']} - Jugador 2: {data.partida['Player2Wins']}")

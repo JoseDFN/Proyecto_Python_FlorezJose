@@ -16,9 +16,9 @@
             "wins": 6,
             "losses": 0,
             "points": 8,
-            "gPlayed": 6,
-            "gamesLostMatchine": 0,
-            "gamesWonMachine": 0
+            "gPlayed": 9,
+            "gamesLostMatchine": 1,
+            "gamesWonMachine": 2
         },
         "3": {
             "name": "baron",
@@ -72,9 +72,8 @@
         }
     },
     "Maquina": {
-        "pJugados": 0,
-        "pGanados": 0,
-        "pPerdidos": 0,
-        "puntosT": 0
+        "pJugados": 3,
+        "pGanados": 1,
+        "pPerdidos": 2
     }
 }
