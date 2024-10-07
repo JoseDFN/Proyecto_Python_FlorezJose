@@ -3,10 +3,10 @@
         "1": {
             "name": "pablo",
             "nickname": "yay",
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
-            "points": 0,
-            "gPlayed": 0,
+            "points": 2,
+            "gPlayed": 1,
             "gamesLostMatchine": 0,
             "gamesWonMachine": 0
         },
@@ -24,9 +24,9 @@
             "name": "baron",
             "nickname": "ouch",
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "points": 0,
-            "gPlayed": 0,
+            "gPlayed": 1,
             "gamesLostMatchine": 0,
             "gamesWonMachine": 0
         },

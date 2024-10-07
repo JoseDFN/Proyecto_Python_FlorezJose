@@ -1,5 +1,6 @@
 import modules.utils.clAndPause as clp
 import modules.utils.messages as msg
+import modules.utils.stats as st
 
 def EstadisticasJuego (game):
     isPlayer = True
@@ -18,9 +19,9 @@ def EstadisticasJuego (game):
             try:
                 match userOpPvE:
                     case 1:
-                        pass
+                        st.tTres()
                     case 2:
-                        pass
+                        st.lastPGame()
                     case 3:
                         pass
                     case 4:
