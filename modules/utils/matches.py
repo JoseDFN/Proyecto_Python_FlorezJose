@@ -20,46 +20,38 @@ def initializedata0 (data):
     data['Player1ShieldActive'] = False
     data['Player2ShieldActive'] = False
 
-def resultadoMatch (oP1, oP2):
-    if (data.partida['Player1ShieldActive'] or data.partida['Player2ShieldActive']):
-        print('Movimiento bloqueado por escudo')
-        data.partida['Player1ShieldActive'] = False
-        data.partida['Player2ShieldActive'] = False
+def resultadoMatch(oP1, oP2):
+    # Procesar el resultado de la partida
+    if oP1 == oP2:
+        data.partida['Tie'] += 1
         data.partida['Player1ConsecutiveWins'] = 0
         data.partida['Player2ConsecutiveWins'] = 0
-    else:
-        if oP1 == oP2:
-            data.partida['Tie'] += 1
-            data.partida['Player1ConsecutiveWins'] = 0
-            data.partida['Player2ConsecutiveWins'] = 0
-        elif (oP1 == 1) and (oP2 == 2):
-            data.partida['Player2Wins'] += 1
-            data.partida['Player2ConsecutiveWins'] += 1
-            data.partida['Player1Losses'] += 1
-        elif (oP1 == 2) and (oP2 == 1):
-            data.partida['Player1Wins'] += 1
-            data.partida['Player1ConsecutiveWins'] += 1
-            data.partida['Player2Losses'] += 1
-        elif (oP1 == 1) and (oP2 == 3):
-            data.partida['Player1Wins'] += 1
-            data.partida['Player1ConsecutiveWins'] += 1
-            data.partida['Player2Losses'] += 1
-        elif (oP1 == 3) and (oP2 == 1):
-            data.partida['Player2Wins'] += 1
-            data.partida['Player2ConsecutiveWins'] += 1
-            data.partida['Player1Losses'] += 1
-        elif (oP1 == 2) and (oP2 == 3):
-            data.partida['Player2Wins'] += 1
-            data.partida['Player2ConsecutiveWins'] += 1
-            data.partida['Player1Losses'] += 1
-        elif (oP1 == 3) and (oP2 == 2):
-            data.partida['Player1Wins'] += 1
-            data.partida['Player1ConsecutiveWins'] += 1
-            data.partida['Player2Losses'] += 1
+    elif (oP1 == 1 and oP2 == 2) or (oP1 == 3 and oP2 == 1):
+        # Jugador 2 gana
+        data.partida['Player2Wins'] += 1
+        data.partida['Player2ConsecutiveWins'] += 1
+        data.partida['Player1Losses'] += 1
+        data.partida['Player1ConsecutiveWins'] = 0
+    elif (oP1 == 2 and oP2 == 1) or (oP1 == 1 and oP2 == 3) or (oP1 == 3 and oP2 == 2):
+        # Jugador 1 gana
+        data.partida['Player1Wins'] += 1
+        data.partida['Player1ConsecutiveWins'] += 1
+        data.partida['Player2Losses'] += 1
+        data.partida['Player2ConsecutiveWins'] = 0
+
+    # Activar escudo si el jugador gana 2 partidas seguidas
     if data.partida['Player1ConsecutiveWins'] == 2:
         data.partida['Player1ShieldActive'] = True
     elif data.partida['Player2ConsecutiveWins'] == 2:
         data.partida['Player2ShieldActive'] = True
+
+    # Verificar si el escudo está activo y si es la tercera victoria consecutiva
+    if data.partida['Player1ShieldActive'] and data.partida['Player1ConsecutiveWins'] == 3:
+        print('Jugador 1 ha ganado su tercera partida consecutiva con escudo activo.')
+        data.partida['Player1ShieldActive'] = False
+    elif data.partida['Player2ShieldActive'] and data.partida['Player2ConsecutiveWins'] == 3:
+        print('Jugador 2 ha ganado su tercera partida consecutiva con escudo activo.')
+        data.partida['Player2ShieldActive'] = False
 
 def modePvP ():
     while True:
@@ -81,14 +73,14 @@ def modePvP ():
             resultadoMatch(opPlayer1, opPlayer2)
             print(f"Resultado actual: Jugador 1: {data.partida['Player1Wins']} - Jugador 2: {data.partida['Player2Wins']}")
             clp.pausar()
-        game_data["Jugadores"][str(Player1)]["points"] = (data.partida['Player1Wins'])*2
-        game_data["Jugadores"][str(Player2)]["points"] = (data.partida['Player2Wins'])*2
         if ((data.partida['Player1Wins']) > (data.partida['Player2Wins'])):
             game_data["Jugadores"][str(Player1)]["wins"] += 1
+            game_data["Jugadores"][str(Player1)]["points"] += 2
             game_data["Jugadores"][str(Player2)]["losses"] += 1
             ganador = "Jugador 1"
         else:
             game_data["Jugadores"][str(Player2)]["wins"] += 1
+            game_data["Jugadores"][str(Player2)]["points"] += 2
             game_data["Jugadores"][str(Player1)]["losses"] += 1
             ganador = "Jugador 2"
         print(f"\n¡El ganador es {ganador}!")
