@@ -14,9 +14,9 @@
             "name": "jose",
             "nickname": "chaps",
             "wins": 6,
-            "losses": 0,
+            "losses": 1,
             "points": 8,
-            "gPlayed": 9,
+            "gPlayed": 10,
             "gamesLostMatchine": 1,
             "gamesWonMachine": 2
         },
@@ -24,9 +24,9 @@
             "name": "baron",
             "nickname": "ouch",
             "wins": 0,
-            "losses": 1,
+            "losses": 2,
             "points": 0,
-            "gPlayed": 1,
+            "gPlayed": 2,
             "gamesLostMatchine": 0,
             "gamesWonMachine": 0
         },
@@ -36,17 +36,17 @@
             "wins": 0,
             "losses": 4,
             "points": 0,
-            "gPlayed": 6,
-            "gamesLostMatchine": 1,
+            "gPlayed": 7,
+            "gamesLostMatchine": 2,
             "gamesWonMachine": 1
         },
         "5": {
             "name": "santiago",
             "nickname": "kutonix",
-            "wins": 0,
+            "wins": 2,
             "losses": 2,
-            "points": 0,
-            "gPlayed": 3,
+            "points": 4,
+            "gPlayed": 5,
             "gamesLostMatchine": 0,
             "gamesWonMachine": 1
         },
@@ -56,9 +56,9 @@
             "wins": 0,
             "losses": 0,
             "points": 0,
-            "gPlayed": 1,
+            "gPlayed": 2,
             "gamesLostMatchine": 0,
-            "gamesWonMachine": 1
+            "gamesWonMachine": 2
         },
         "7": {
             "name": "hallo",
@@ -69,11 +69,21 @@
             "gPlayed": 0,
             "gamesLostMatchine": 0,
             "gamesWonMachine": 0
+        },
+        "8": {
+            "name": "andres",
+            "nickname": "caro",
+            "wins": 0,
+            "losses": 0,
+            "points": 0,
+            "gPlayed": 0,
+            "gamesLostMatchine": 0,
+            "gamesWonMachine": 0
         }
     },
     "Maquina": {
-        "pJugados": 7,
-        "pGanados": 2,
-        "pPerdidos": 5
+        "pJugados": 9,
+        "pGanados": 3,
+        "pPerdidos": 6
     }
 }

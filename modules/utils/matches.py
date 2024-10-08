@@ -70,6 +70,7 @@ def resultadoMatch(oP1, oP2):
 
 def modePvP ():
     while True:
+        oprandom = [1,2,3]
         initializedata0(data.partida)
         game_data = core.ReadFile()
         Player1 = data.partida['Player1']
@@ -79,12 +80,33 @@ def modePvP ():
         clp.limpiar()
         print (msg.BienvenidoMatch)
         while (((data.partida['Player1Wins']) or (data.partida['Player2Wins'])) < 3):
+            opPlayer1 = int(0)
+            opPlayer2 = int(0)
             clp.limpiar()
             print (msg.OpcionesJuego)
-            opPlayer1 = int(input('Ingrese la opcion a elegir para Jugador 1: '))
+            try:
+                opPlayer1 = int(input('Ingrese la opcion a elegir para Jugador 1: '))
+                while opPlayer1 not in oprandom:
+                    print("Opcion invalida")
+                    opPlayer1 = int(input('Ingrese la opcion a elegir para Jugador 1: '))
+            except ValueError:
+                # En caso de que el usuario ingrese algo que no sea un número.
+                print('Tipo de opción no válida. Por favor ingrese un número.')
+                clp.pausar()
+                continue
             clp.limpiar()
             print (msg.OpcionesJuego)
-            opPlayer2 = int(input('Ingrese la opcion a elegir para Jugador 2: '))
+            try:
+                opPlayer2 = int(input('Ingrese la opcion a elegir para Jugador 2: '))
+                while opPlayer2 not in oprandom:
+                    print("Opcion invalida")
+                    opPlayer1 = int(input('Ingrese la opcion a elegir para Jugador 1: '))
+            except ValueError:
+                # En caso de que el usuario ingrese algo que no sea un número.
+                print('Tipo de opción no válida. Por favor ingrese un número.')
+                clp.pausar()
+                continue
+            clp.limpiar()
             resultadoMatch(opPlayer1, opPlayer2)
             print("La opcion que selecciono el jugador 1 es: ")
             msg.pOpPlayers(opPlayer1)
@@ -119,9 +141,20 @@ def modePvE ():
         clp.limpiar()
         print (msg.BienvenidoMatch)
         while (((data.partida['Player1Wins']) or (data.partida['Player2Wins'])) < 3):
+            opPlayer1 = int(0)
+            opPlayer2 = int(0)
             clp.limpiar()
             print (msg.OpcionesJuego)
-            opPlayer1 = int(input('Ingrese la opcion a elegir para Jugador 1: '))
+            try:
+                opPlayer1 = int(input('Ingrese la opcion a elegir para Jugador 1: '))
+                while opPlayer1 not in oprandom:
+                    print("Opcion invalida")
+                    opPlayer1 = int(input('Ingrese la opcion a elegir para Jugador 1: '))
+            except ValueError:
+                # En caso de que el usuario ingrese algo que no sea un número.
+                print('Tipo de opción no válida. Por favor ingrese un número.')
+                clp.pausar()
+                continue
             clp.limpiar()
             opPlayer2 = random.choice(oprandom)
             resultadoMatch(opPlayer1, opPlayer2)
