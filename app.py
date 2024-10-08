@@ -9,8 +9,11 @@ import modules.utils.stats as st
 
 
 if (__name__ == '__main__'):
+    #Iniico variable de opciones en 0
     userOp = int(0)
+    #Inicio variable de control de ciclo
     isGame = True
+    #Diccionario usado para evaluar y/o crear el Json, usado proximamente como argumento para la funcion checkFile
     Game = {
         'Jugadores':{},
         'Maquina':{

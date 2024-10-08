@@ -1,5 +1,16 @@
 {
-    "Jugadores": {},
+    "Jugadores": {
+        "1": {
+            "name": "alexis",
+            "nickname": "zero",
+            "wins": 0,
+            "losses": 0,
+            "points": 0,
+            "gPlayed": 0,
+            "gamesLostMatchine": 0,
+            "gamesWonMachine": 0
+        }
+    },
     "Maquina": {
         "pJugados": 0,
         "pGanados": 0,
