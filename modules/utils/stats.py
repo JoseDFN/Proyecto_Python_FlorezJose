@@ -74,4 +74,4 @@ def avgWinsAi ():
     game_data = core.ReadFile()
     prom = ((game_data["Maquina"]["pPerdidos"])/(game_data["Maquina"]["pJugados"]))*100
     print(f"El promedio de jugadores que le han ganado a la IA es: {round(prom, 2)}%")
-    clp.pausar().pausar()
+    clp.pausar()

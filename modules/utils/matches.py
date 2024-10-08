@@ -22,23 +22,37 @@ def initializedata0 (data):
     data['Player2ShieldActive'] = False
 
 def resultadoMatch(oP1, oP2):
+    wP1 = False
+    wP2 = False
     # Procesar el resultado de la partida
     if oP1 == oP2:
         data.partida['Tie'] += 1
         data.partida['Player1ConsecutiveWins'] = 0
         data.partida['Player2ConsecutiveWins'] = 0
     elif (oP1 == 1 and oP2 == 2) or (oP1 == 3 and oP2 == 1):
+        wP2 = True
+        if (wP2 and data.partida['Player1ShieldActive']):
+            print('Movimiento Bloqueado')
+            data.partida['Player1ShieldActive'] = False
+            data.partida['Player1ConsecutiveWins'] = 0
+        else:
         # Jugador 2 gana
-        data.partida['Player2Wins'] += 1
-        data.partida['Player2ConsecutiveWins'] += 1
-        data.partida['Player1Losses'] += 1
-        data.partida['Player1ConsecutiveWins'] = 0
+            data.partida['Player2Wins'] += 1
+            data.partida['Player2ConsecutiveWins'] += 1
+            data.partida['Player1Losses'] += 1
+            data.partida['Player1ConsecutiveWins'] = 0
     elif (oP1 == 2 and oP2 == 1) or (oP1 == 1 and oP2 == 3) or (oP1 == 3 and oP2 == 2):
-        # Jugador 1 gana
-        data.partida['Player1Wins'] += 1
-        data.partida['Player1ConsecutiveWins'] += 1
-        data.partida['Player2Losses'] += 1
-        data.partida['Player2ConsecutiveWins'] = 0
+        wP1 = True
+        if (wP1 and data.partida['Player2ShieldActive']):
+            print('Movimiento Bloqueado')
+            data.partida['Player2ShieldActive'] = False
+            data.partida['Player2ConsecutiveWins'] = 0
+        else:
+            # Jugador 1 gana
+            data.partida['Player1Wins'] += 1
+            data.partida['Player1ConsecutiveWins'] += 1
+            data.partida['Player2Losses'] += 1
+            data.partida['Player2ConsecutiveWins'] = 0
 
     # Activar escudo si el jugador gana 2 partidas seguidas
     if data.partida['Player1ConsecutiveWins'] == 2:
