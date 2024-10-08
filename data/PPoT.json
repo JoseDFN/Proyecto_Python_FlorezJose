@@ -24,9 +24,9 @@
             "name": "baron",
             "nickname": "ouch",
             "wins": 0,
-            "losses": 2,
+            "losses": 3,
             "points": 0,
-            "gPlayed": 2,
+            "gPlayed": 3,
             "gamesLostMatchine": 0,
             "gamesWonMachine": 0
         },
@@ -79,11 +79,31 @@
             "gPlayed": 0,
             "gamesLostMatchine": 0,
             "gamesWonMachine": 0
+        },
+        "9": {
+            "name": "gkja",
+            "nickname": "gaja",
+            "wins": 1,
+            "losses": 0,
+            "points": 2,
+            "gPlayed": 1,
+            "gamesLostMatchine": 0,
+            "gamesWonMachine": 0
+        },
+        "10": {
+            "name": "jnakjngj",
+            "nickname": "hlkmnkjab",
+            "wins": 0,
+            "losses": 0,
+            "points": 0,
+            "gPlayed": 1,
+            "gamesLostMatchine": 0,
+            "gamesWonMachine": 1
         }
     },
     "Maquina": {
-        "pJugados": 9,
+        "pJugados": 10,
         "pGanados": 3,
-        "pPerdidos": 6
+        "pPerdidos": 7
     }
 }
