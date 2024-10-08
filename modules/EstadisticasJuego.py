@@ -23,9 +23,9 @@ def EstadisticasJuego (game):
                     case 2:
                         st.lastPGame()
                     case 3:
-                        pass
+                        st.mostLossesAi()
                     case 4:
-                        pass
+                        st.avgWinsAi()
                     case 5:
                         isPlayer = False
                     case _:

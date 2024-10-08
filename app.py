@@ -5,6 +5,7 @@ import modules.PvPMode as pvpMode
 import modules.PvEMode as pveMode
 import modules.EstadisticasJuego as statsG
 from math import e  # Importa la constante 'e' de la librería math
+import modules.utils.stats as st
 
 
 if (__name__ == '__main__'):
@@ -40,7 +41,7 @@ if (__name__ == '__main__'):
                     case 3:
                         statsG.EstadisticasJuego(cf.MY_DATABASE)
                     case 4:
-                        pass
+                        st.tabla()
                     case 5:
                         clp.limpiar()
                         isGame = False
