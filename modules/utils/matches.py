@@ -29,7 +29,7 @@ def resultadoMatch(oP1, oP2):
         data.partida['Tie'] += 1
         data.partida['Player1ConsecutiveWins'] = 0
         data.partida['Player2ConsecutiveWins'] = 0
-    elif (oP1 == 1 and oP2 == 2) or (oP1 == 3 and oP2 == 1):
+    elif (oP1 == 1 and oP2 == 2) or (oP1 == 3 and oP2 == 1) or (oP1 == 2 and oP2 == 3):
         wP2 = True
         if (wP2 and data.partida['Player1ShieldActive']):
             print('Movimiento Bloqueado')
@@ -86,6 +86,10 @@ def modePvP ():
             print (msg.OpcionesJuego)
             opPlayer2 = int(input('Ingrese la opcion a elegir para Jugador 2: '))
             resultadoMatch(opPlayer1, opPlayer2)
+            print("La opcion que selecciono el jugador 1 es: ")
+            msg.pOpPlayers(opPlayer1)
+            print("La opcion que selecciono el jugador 2 es: ")
+            msg.pOpPlayers(opPlayer2)
             print(f"Resultado actual: Jugador 1: {data.partida['Player1Wins']} - Jugador 2: {data.partida['Player2Wins']}")
             clp.pausar()
         if ((data.partida['Player1Wins']) > (data.partida['Player2Wins'])):
@@ -98,6 +102,7 @@ def modePvP ():
             game_data["Jugadores"][str(Player2)]["points"] += 2
             game_data["Jugadores"][str(Player1)]["losses"] += 1
             ganador = "Jugador 2"
+            
         print(f"\n¡El ganador es {ganador}!")
         print(f"Resultado final: Jugador 1: {data.partida['Player1Wins']} - Jugador 2: {data.partida['Player2Wins']}")
         core.save_game(game_data)
@@ -120,6 +125,10 @@ def modePvE ():
             clp.limpiar()
             opPlayer2 = random.choice(oprandom)
             resultadoMatch(opPlayer1, opPlayer2)
+            print("La opcion que selecciono el jugador 1 es: ")
+            msg.pOpPlayers(opPlayer1)
+            print("La opcion que selecciono el jugador 2 es: ")
+            msg.pOpPlayers(opPlayer2)
             print(f"Resultado actual: Jugador 1: {data.partida['Player1Wins']} - Jugador 2: {data.partida['Player2Wins']}")
             clp.pausar()
         if ((data.partida['Player1Wins']) > (data.partida['Player2Wins'])):
@@ -130,6 +139,7 @@ def modePvE ():
             game_data["Maquina"]["pGanados"] += 1
             game_data["Jugadores"][str(Player1)]["gamesLostMatchine"] += 1
             ganador = "Jugador 2"
+        
         print(f"\n¡El ganador es {ganador}!")
         print(f"Resultado final: Jugador 1: {data.partida['Player1Wins']} - Jugador 2: {data.partida['Player2Wins']}")
         core.save_game(game_data)

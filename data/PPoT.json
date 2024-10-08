@@ -36,9 +36,9 @@
             "wins": 0,
             "losses": 4,
             "points": 0,
-            "gPlayed": 4,
-            "gamesLostMatchine": 0,
-            "gamesWonMachine": 0
+            "gPlayed": 6,
+            "gamesLostMatchine": 1,
+            "gamesWonMachine": 1
         },
         "5": {
             "name": "santiago",
@@ -46,9 +46,9 @@
             "wins": 0,
             "losses": 2,
             "points": 0,
-            "gPlayed": 2,
+            "gPlayed": 3,
             "gamesLostMatchine": 0,
-            "gamesWonMachine": 0
+            "gamesWonMachine": 1
         },
         "6": {
             "name": "pablo",
@@ -56,9 +56,9 @@
             "wins": 0,
             "losses": 0,
             "points": 0,
-            "gPlayed": 0,
+            "gPlayed": 1,
             "gamesLostMatchine": 0,
-            "gamesWonMachine": 0
+            "gamesWonMachine": 1
         },
         "7": {
             "name": "hallo",
@@ -72,8 +72,8 @@
         }
     },
     "Maquina": {
-        "pJugados": 3,
-        "pGanados": 1,
-        "pPerdidos": 2
+        "pJugados": 7,
+        "pGanados": 2,
+        "pPerdidos": 5
     }
 }

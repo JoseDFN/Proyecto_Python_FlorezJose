@@ -72,3 +72,14 @@ LoginJugador = "Ingrese codigo del jugador a logearse: "
 
 def mensajeErro (e):
     print(f"Ha ocurrido un error inesperado: {e}")
+    
+def pOpPlayers (op):
+  match op:
+    case 1:
+      print("1.Piedra ✊")
+    case 2:
+      print("2.Papel ✋")
+    case 3:
+      print("3.Tijera ✂️")
+    case _:
+      print("Opcion del jugador invalida")
