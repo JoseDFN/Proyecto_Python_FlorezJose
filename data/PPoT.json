@@ -9,11 +9,21 @@
             "gPlayed": 0,
             "gamesLostMatchine": 0,
             "gamesWonMachine": 0
+        },
+        "2": {
+            "name": "juan",
+            "nickname": "idk",
+            "wins": 0,
+            "losses": 0,
+            "points": 0,
+            "gPlayed": 1,
+            "gamesLostMatchine": 0,
+            "gamesWonMachine": 1
         }
     },
     "Maquina": {
-        "pJugados": 0,
+        "pJugados": 1,
         "pGanados": 0,
-        "pPerdidos": 0
+        "pPerdidos": 1
     }
 }

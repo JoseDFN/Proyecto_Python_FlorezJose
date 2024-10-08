@@ -5,11 +5,17 @@ El juego "The Cachipun" es una "copia" de piedra papel y/o tijera pero con el po
 Dentro del juego se puede, registrar jugadores, seleccionarlos para jugar las distintas partidas, jugar como tal el juego y ver las estadisticas (mejores 3, ultimo de la tabla, jugadores con mas perdidas contra la maquina y el promedio de los jugadores que le han ganado a la maquina.)
 ------------------------------------------------------------------------
 Modulo 1, app:
-En el modulo principal, app.py, inicialmente se importan los modulos para limpiar y pausar dependiendo del OS (modulo clAndPause) como clp, el modulo para los mensajes que se muestran por pantalla (messages)como msg, el modulo core para el Json (core) como cf, el modulo para el menu de la seccion PvP (PvPMode) como pvpMode, el modulo para el menu de la seccion PvE (PvEMode) como pveMode, el modulo para el menu de las estadisitcas (EstadisticasJuego) como statsG y el modulo stats para la tabla de puntos o posiciones (stats) como st.
+Este módulo es parte de un juego que permite a los usuarios elegir entre diferentes modos de juego y ver estadísticas. Utiliza varias utilidades y funciones modularizadas para facilitar la interacción con el usuario y gestionar el estado del juego.
 
-posterior a esto se definio el cuerpo del modulo principal, que es el modulo del que se debe ejecutar el juego. dentro de este cuerpo principal se definio e hizo lo siguiente:
-1.Se define o inicia la variable userOp en 0 para su posterior uso en la seleccion del menu.
-2.Se inicia la variable isGame como True para su posterior uso como controlador del ciclo o bucle.
-3.Se define el diccionario usado como referencia para evaluar y/o crear el archivo Json en donde se harà la persistencia de datos.
-4.Se inicializa el bucle teniendo como variable de control a isGame(en este caso, el bucle seguira activo mientras la variable tenga como valor True).
-5.Se le asigna como valor o ruta 'data/PPoT.json' a la variable MY_DATABASE, contenida en el core file.
+Las importaciones que se hicieron en este modulo principal son:
+-clAndPause: Para limpiar la pantalla y pausar la ejecución.
+-messages: Para mostrar mensajes y menús al usuario.
+-core: Para manejar la base de datos del juego.
+-PvPMode y PvEMode: Para gestionar los modos de juego jugador contra jugador y jugador contra máquina, respectivamente.
+-EstadisticasJuego: Para mostrar las estadísticas del juego.
+-stats: Para manejar estadísticas adicionales.
+-math.e: Se importa la constante 'e' de la librería de matemáticas, aunque no se utiliza en el fragmento proporcionado.
+
+En un primer momento el programa inicia variables de control como isGame en True, variables de control de opcion como userOp en 0 y se crea el diccionario "principal" en el que se encontrara el diccionario vacio de jugadores y el diccionario de maquina con sus estadisticas incializadas en 0 (número de partidas jugadas, ganadas y perdidas)
+
+Luego se inicializa un bucle en el que se usa como controlador la variable isGame. Dentro del bucle se le asigna la ruta al archivo MY_DATABASE
