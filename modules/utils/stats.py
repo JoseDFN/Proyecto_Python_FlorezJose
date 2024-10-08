@@ -5,6 +5,7 @@ import modules.utils.dataPlayers as data
 import modules.utils.core as core
 
 def tTres ():
+    clp.limpiar()
     game_data = core.ReadFile()
     jugadores = game_data["Jugadores"]
     # Convertir los jugadores a una lista de diccionarios
@@ -17,6 +18,7 @@ def tTres ():
         print(f"Top {idx}: {player['name']} ({player['nickname']}) con {player['points']} points")
     clp.pausar()
 def lastPGame():
+    clp.limpiar()
     game_data = core.ReadFile()
     jugadores = game_data["Jugadores"]
     
@@ -39,6 +41,7 @@ def lastPGame():
     clp.pausar()
 
 def tabla():
+    clp.limpiar()
     game_data = core.ReadFile()
     jugadores = game_data["Jugadores"]
     # Convertir los jugadores a una lista de diccionarios
@@ -51,7 +54,8 @@ def tabla():
         print(f"Top {idx}: {player['name']} ({player['nickname']}) con {player['points']} points")
     clp.pausar()
 
-def mostLossesAi () : 
+def mostLossesAi () :
+    clp.limpiar()
     game_data = core.ReadFile()
     jugadores = game_data["Jugadores"]
     
@@ -71,6 +75,7 @@ def mostLossesAi () :
     clp.pausar()
 
 def avgWinsAi ():
+    clp.limpiar()
     game_data = core.ReadFile()
     prom = ((game_data["Maquina"]["pPerdidos"])/(game_data["Maquina"]["pJugados"]))*100
     print(f"El promedio de jugadores que le han ganado a la IA es: {round(prom, 2)}%")
