@@ -6,9 +6,9 @@
             "wins": 0,
             "losses": 0,
             "points": 0,
-            "gPlayed": 0,
-            "gamesLostMatchine": 0,
-            "gamesWonMachine": 0
+            "gPlayed": 4,
+            "gamesLostMatchine": 1,
+            "gamesWonMachine": 3
         },
         "2": {
             "name": "juan",
@@ -26,14 +26,24 @@
             "wins": 1,
             "losses": 0,
             "points": 2,
+            "gPlayed": 4,
+            "gamesLostMatchine": 1,
+            "gamesWonMachine": 2
+        },
+        "4": {
+            "name": "brayan",
+            "nickname": "bueno",
+            "wins": 0,
+            "losses": 0,
+            "points": 0,
             "gPlayed": 1,
             "gamesLostMatchine": 0,
-            "gamesWonMachine": 0
+            "gamesWonMachine": 1
         }
     },
     "Maquina": {
-        "pJugados": 1,
-        "pGanados": 0,
-        "pPerdidos": 1
+        "pJugados": 9,
+        "pGanados": 2,
+        "pPerdidos": 7
     }
 }

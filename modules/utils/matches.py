@@ -163,7 +163,7 @@ def modePvE():
         print(msg.BienvenidoMatch)  # Mensaje de bienvenida
 
         # Jugar hasta que uno de los jugadores gane 3 partidas
-        while ((data.partida['Player1Wins'] or data.partida['Player2Wins']) < 3):
+        while (((data.partida['Player1Wins'] or data.partida['Player2Wins'])) < 3):
             opPlayer1 = int(0)
             opPlayer2 = int(0)
             clp.limpiar()
@@ -208,4 +208,5 @@ def modePvE():
         print(f"Resultado final: Jugador 1: {data.partida['Player1Wins']} - Jugador 2: {data.partida['Player2Wins']}")
         core.save_game(game_data)  # Guardar los datos del juego
         print(msg.graciasJugar)  # Mensaje de despedida
+        clp.pausar()
         break
