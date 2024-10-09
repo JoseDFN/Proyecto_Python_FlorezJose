@@ -14,11 +14,21 @@
             "name": "juan",
             "nickname": "idk",
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "points": 0,
-            "gPlayed": 1,
+            "gPlayed": 2,
             "gamesLostMatchine": 0,
             "gamesWonMachine": 1
+        },
+        "3": {
+            "name": "lucia",
+            "nickname": "luchis",
+            "wins": 1,
+            "losses": 0,
+            "points": 2,
+            "gPlayed": 1,
+            "gamesLostMatchine": 0,
+            "gamesWonMachine": 0
         }
     },
     "Maquina": {
